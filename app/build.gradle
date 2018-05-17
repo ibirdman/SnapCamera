@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "org.codeaurora.snapcam"
+        minSdkVersion 26
+        targetSdkVersion 26
+
+        testApplicationId "com.android.camera.tests"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+
+    sourceSets {
+        main.java.srcDirs += ['src/src_pd', 'src/src_pd_gcam', 'src/src_wrapper']
+        main.renderscript.srcDirs = ['src/rs']
+        main.jniLibs.srcDirs = ['src/main/libs']
+    }
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        implementation 'com.android.support:appcompat-v7:26.1.0'
+        implementation 'com.android.support:support-v13:26.1.0'
+        implementation 'com.adobe.xmp:xmpcore:5.1.1'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compileOnly files('src/main/libs/framework.jar')
+}
