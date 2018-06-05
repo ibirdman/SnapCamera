@@ -1,8 +1,5 @@
 package android.util;
 
-/**
- * Created by xp018347 on 4/17/18.
- */
 
 import java.lang.reflect.Method;
 
