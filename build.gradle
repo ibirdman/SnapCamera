@@ -16,7 +16,7 @@ allprojects {
     }
     gradle.projectsEvaluated {
         tasks.withType(JavaCompile) {
-            options.compilerArgs.add('-Xbootclasspath/p:/home/CORPUSERS/xp018347/WorkStation/code/demo/SnapdragonCamera1/app/src/main/libs//framework.jar')
+            options.compilerArgs.add('-Xbootclasspath/p:/home/CORPUSERS/xxxx/WorkStation/code/demo/SnapdragonCamera1/app/src/main/libs//framework.jar')
         }
     }
 }
