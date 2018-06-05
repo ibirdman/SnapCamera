@@ -7,9 +7,6 @@ import android.hardware.camera2.CaptureResult;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-/**
- * Created by xp018347 on 4/17/18.
- */
 
 public class keyUtils {
     public static CaptureRequest.Key<?> keyConstructor(String name, Class<?> type) {
